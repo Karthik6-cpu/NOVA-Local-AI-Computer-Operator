@@ -1,0 +1,16 @@
+﻿.venv/
+venv/
+__pycache__/
+*.py[cod]
+.env
+.env.*
+!.env.example
+*.db
+*.sqlite3
+.DS_Store
+Thumbs.db
+logs/
+models/
+workspace/
+backup_before_voice_upgrade/
+*.bak

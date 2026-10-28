@@ -1,0 +1,39 @@
+NOVA Voice Approval + Windows App Control Update
+=================================================
+
+IMPORTANT: Close NOVA before updating.
+
+1. Make a backup copy of your current project folder.
+2. Extract this ZIP into the parent folder:
+   D:\NOVA_Local_AI_Computer_Operator_fixed
+   The ZIP contains NOVA_Local_AI_Computer_Operator\... files. Choose to merge folders and replace the updated code files when Windows asks.
+3. KEEP your existing .venv, .env, models\vosk-model-small-en-us-0.15, workspace, and logs folders.
+   This ZIP does not include your downloaded Vosk model or private .env file.
+4. Open PowerShell in:
+   D:\NOVA_Local_AI_Computer_Operator_fixed\NOVA_Local_AI_Computer_Operator
+5. Activate the existing environment:
+   .\.venv\Scripts\Activate.ps1
+6. Install voice packages if not already installed:
+   python -m pip install -r requirements-voice.txt
+7. Start NOVA:
+   python main.py
+
+Voice approval:
+- When a plan with actions appears, NOVA listens for up to 60 seconds.
+- Say clearly: "Approve" or "Reject".
+- Other speech is ignored. The manual button remains as a fallback.
+- If NOVA cannot access the microphone, check Windows microphone privacy settings and ensure no other application is exclusively using the microphone.
+
+New actions:
+- Open File Explorer
+- Open Windows Settings
+- Open Task Manager
+- Open default browser
+- List applications available through Start Menu shortcuts
+- Open a named application using its Start Menu shortcut
+- Open an existing folder by its absolute path
+
+Limitations:
+- This update does not yet implement unrestricted keyboard/mouse control, a wake word, or automatic WhatsApp message sending.
+- Start Menu app discovery only sees shortcuts available in standard Windows Start Menu folders.
+- Keep reviewing each proposed action before approving it.
